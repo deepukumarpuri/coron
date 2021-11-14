@@ -35,7 +35,7 @@ async def start(bot, update):
     )
 
 
-@Bot.on_message(filters.private & filters.text)
+@Bot.on_message(filters.private & filters.command(["covid"]))
 async def reply_info(bot, update):
     reply_markup = BUTTONS
     await update.reply_text(
